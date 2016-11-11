@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uLG-Oa-n0B">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdz-jn-h2I">
+                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="nrN-p5-jiz">
+                                <rect key="frame" x="38" y="550" width="524" height="31"/>
+                                <connections>
+                                    <action selector="changeSlideValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="h2G-DV-nA1"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbT-py-aTm">
+                                <rect key="frame" x="208" y="512" width="184" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
+                                <state key="normal" title="abvdvfgdgfhththththththth"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jdz-jn-h2I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="4DC-DC-j1p"/>
+                            <constraint firstAttribute="trailing" secondItem="nrN-p5-jiz" secondAttribute="trailing" constant="40" id="4EO-Xq-bjJ"/>
+                            <constraint firstAttribute="trailing" secondItem="jdz-jn-h2I" secondAttribute="trailing" id="R3y-xR-r6y"/>
+                            <constraint firstItem="jdz-jn-h2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b3q-ND-kyX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nrN-p5-jiz" secondAttribute="bottom" constant="20" id="bzQ-2K-7TB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jdz-jn-h2I" secondAttribute="bottom" id="fPe-hj-ocm"/>
+                            <constraint firstItem="nrN-p5-jiz" firstAttribute="top" secondItem="QbT-py-aTm" secondAttribute="bottom" constant="8" symbolic="YES" id="lRj-Ke-Iff"/>
+                            <constraint firstItem="nrN-p5-jiz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="uch-jg-u28"/>
+                            <constraint firstItem="QbT-py-aTm" firstAttribute="centerX" secondItem="nrN-p5-jiz" secondAttribute="centerX" id="ykH-uA-cxt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nIW-Cg-Ewg"/>
+                    <connections>
+                        <outlet property="imagVw" destination="jdz-jn-h2I" id="1pw-yD-kse"/>
+                        <outlet property="slider" destination="nrN-p5-jiz" id="7cE-qC-6lK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="glO-nl-xkH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uLG-Oa-n0B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cWB-hQ-wGC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e8x-7h-Dsl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wk7-cX-MLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="478"/>
+        </scene>
+    </scenes>
+</document>
